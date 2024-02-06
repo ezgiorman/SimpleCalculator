@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/number1text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Enter number 1"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/number2text"
+        app:layout_constraintStart_toStartOf="@+id/number2text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:hint="Enter number 2"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/number1text" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="320dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="204dp"
+        android:text="Result: 0"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="309dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="59dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2text">
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Tertiary"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_marginHorizontal="5sp"
+            android:background="@color/material_dynamic_neutral70"
+            android:onClick="sum"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Tertiary"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_marginHorizontal="5sp"
+            android:background="@color/material_dynamic_neutral70"
+            android:onClick="subtract"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Tertiary"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_marginHorizontal="5sp"
+            android:background="@color/material_dynamic_neutral70"
+            android:onClick="multiply"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Tertiary"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_marginHorizontal="5sp"
+            android:background="@color/material_dynamic_neutral70"
+            android:onClick="divide"
+            android:text="/"
+            app:layout_constraintStart_toEndOf="@+id/button" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
